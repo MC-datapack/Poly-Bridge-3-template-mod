@@ -3,10 +3,23 @@
 --
 
 local infiniteLength = 1001
+local vehicle = "Ambulance"
+-- https://docs.google.com/document/d/1T9N3pZtnwwANGulffpsGbb2jBpspRbTTxYUyGRgfkqY/edit?tab=t.0#heading=h.pu1slelop0va
+local road = "ROAD"
+-- https://docs.google.com/document/d/1T9N3pZtnwwANGulffpsGbb2jBpspRbTTxYUyGRgfkqY/edit?tab=t.0#heading=h.2g8ibsukp3gn
 
-SetMaterialStrength("ROAD",1800000)
-SetMaterialCost("ROAD",10000)
-SetMaterialMaxLength("ROAD", infiniteLength)
+SetMaterialStrength(road,1800000)
+SetMaterialCost(road,10000)
+SetMaterialMaxLength(road, infiniteLength)
+
+
+SetVehicleAcceleration(vehicle, 200.0)
+SetVehicleHorsepower(vehicle, 150.0)
+SetVehicleTargetSpeed(vehicle, 250.0)
+SetVehicleMass(vehicle, 10.0)
+SetVehicleFlippedDirection(vehicle, false)
+SetVehicleBrakingForce(vehicle, 100.0)
+SetVehicleIdleDownhill(vehicle, true)
 
 local speeds = {}
 table.insert(speeds,10)
